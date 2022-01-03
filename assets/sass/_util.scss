@@ -1,0 +1,25 @@
+.primary {
+  fill: var(--primary);
+}
+
+.secondary {
+  fill: var(--secondary);
+}
+
+.bg-rtl {
+  background-position: right;
+}
+
+.bg-ltr {
+  background-position: left;
+}
+
+[dir=rtl] {
+  .bg-rtl {
+    background-position: left;
+  }
+
+  .bg-ltr {
+    background-position: right;
+  }
+}

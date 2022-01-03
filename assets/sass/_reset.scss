@@ -1,0 +1,23 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(-38deg,#09C957 0,#045224 100%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(-38deg,#045224 0,#09C957 100%);
+}
+::selection{
+  background-color: var(--primary);
+  color: #fff;
+}
+*{
+  scroll-behavior: smooth;
+}

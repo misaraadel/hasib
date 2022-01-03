@@ -1,0 +1,83 @@
+@import "var";
+@import "reset";
+@import "util";
+@import "animations";
+
+.animated{
+animation-duration: 1s;
+animation-fill-mode: both;
+
+&.fadeInUp{
+animation-name: fadeInUp;
+}
+
+&.fadeInLeft{
+animation-name: fadeInLeft;
+}
+
+&.fadeInRight{
+animation-name: fadeInRight;
+}
+
+&.shape{
+animation-name: clip;
+}
+}
+
+.heading{
+width: fit-content;
+
+h4{
+width: fit-content;
+&::After , &::before{
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  background-color: var(--secondary);
+  top: calc(50% - .5px);
+  z-index: -1;
+}
+
+&::After{
+  left: -100%;
+}
+
+&::before{
+  right: -100%;
+}
+}
+
+h5{
+line-height: 71px;
+}
+}
+
+.headingStyle{
+&::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color:  var(--secondary);
+  left: -100%;
+  top: calc(50% - .5px);
+  z-index: -1;
+}
+}
+
+.check-list{
+li{
+&::After{
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url('/img/check.svg') center/contain no-repeat;
+  top: calc(50% - 12px);
+  right: 0px;
+  z-index: -1;
+  filter: invert(68%) sepia(69%) saturate(4768%) hue-rotate(106deg) brightness(101%) contrast(93%);
+}
+}
+}
